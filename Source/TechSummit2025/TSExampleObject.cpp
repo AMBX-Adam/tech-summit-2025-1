@@ -3,3 +3,6 @@
 
 #include "TSExampleObject.h"
 
+void UTSExampleObject::DoSomething()
+{
+}

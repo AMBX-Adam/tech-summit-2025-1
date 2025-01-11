@@ -15,4 +15,5 @@ class TECHSUMMIT2025_API UTSExampleObject : public UObject
 {
 	GENERATED_BODY() 
 	
+	void DoSomething();
 };
