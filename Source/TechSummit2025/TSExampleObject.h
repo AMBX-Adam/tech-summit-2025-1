@@ -14,14 +14,5 @@ UCLASS()
 class TECHSUMMIT2025_API UTSExampleObject : public UObject
 {
 	GENERATED_BODY() 
-
-public:
-	UFUNCTION(Server, Reliable) 
-	void Server_TestFunc();
-
-	UFUNCTION(Server, Reliable, WithValidation) 
-	void Server_TestFuncValidated();
-
-	UFUNCTION(BlueprintNativeEvent)
-	void TestNativeEvent();
+	
 };
