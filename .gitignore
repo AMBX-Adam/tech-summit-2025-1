@@ -82,3 +82,5 @@ DerivedDataCache/*
 *.patch_*.exp
 
 Packaged/*
+
+*.user
