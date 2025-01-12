@@ -80,3 +80,5 @@ DerivedDataCache/*
 
 *.pdb
 *.patch_*.exp
+
+Packaged/*
