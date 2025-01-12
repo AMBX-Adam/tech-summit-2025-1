@@ -3,6 +3,45 @@
 
 #include "TSExampleObject.h"
 
+#include "TechSummit2025Character.h"
+#include "TSGameplayTags.h"
+
 void UTSExampleObject::DoSomething()
+{
+	float TestFloat = 1.5f;
+	float TestFloat2 = 5.f;
+
+	float FinalFloat = TestFloat + TestFloat2;
+	
+	FTSGameplayTags::Get().TestTag;
+	
+	FVector TestVector(FinalFloat);
+	FVector RandVector = FMath::VRand();
+	
+	float DotProduct = TestVector.Dot(RandVector);
+
+	TestFloat = TestFloat * DotProduct;
+}
+
+void UTSExampleObject::CallableFunction()
+{
+	ReadWriteableVariable = 100;
+	EditAnywhereVariable = 100;
+}
+
+void UTSExampleObject::NativeEventFunction_Implementation()
+{
+}
+
+void UTSExampleObject::Func1()
+{
+	CallableFunction();
+}
+
+void UTSExampleObject::Func2()
+{
+}
+
+void UTSExampleObject::Func3()
 {
 }

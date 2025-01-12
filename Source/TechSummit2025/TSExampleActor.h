@@ -7,7 +7,7 @@
 #include "GameFramework/Actor.h"
 #include "TSExampleActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable, BlueprintType)
 class TECHSUMMIT2025_API ATSExampleActor : public AActor, public ITSExampleInterface 
 {
 	GENERATED_BODY()
@@ -15,6 +15,9 @@ class TECHSUMMIT2025_API ATSExampleActor : public AActor, public ITSExampleInter
 public:
 	// Sets default values for this actor's properties
 	ATSExampleActor();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bExampleBool;
 
 protected:
 	// Called when the game starts or when spawned
