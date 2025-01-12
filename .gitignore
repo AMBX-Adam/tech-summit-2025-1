@@ -79,3 +79,4 @@ DerivedDataCache/*
 .vsconfig
 
 *.pdb
+*.patch_*.exp
