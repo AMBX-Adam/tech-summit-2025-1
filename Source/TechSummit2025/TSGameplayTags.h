@@ -20,9 +20,9 @@ protected:
 	FTSGameplayTags()
 	{
 		//This crashes the game and game will not run in packaged builds
-		UGameplayTagsManager& Manager = UGameplayTagsManager::Get();
-		
-		Manager.AddNativeGameplayTag("CrashTag");
+		// UGameplayTagsManager& Manager = UGameplayTagsManager::Get();
+		//
+		// Manager.AddNativeGameplayTag("CrashTag");
 	}
 	
 	virtual void AddTags() override
