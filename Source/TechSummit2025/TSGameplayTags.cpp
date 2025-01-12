@@ -6,7 +6,7 @@ FTSGameplayTags FTSGameplayTags::GameplayTags;
 void FTSGameplayTags::InitializeNativeTags()
 {
 	UGameplayTagsManager& Manager = UGameplayTagsManager::Get();
-
+	
 	Manager.AddTagIniSearchPath(FPaths::ProjectConfigDir() / TEXT("GameplayTags"));
 
 	GameplayTags.AddTags();

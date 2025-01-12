@@ -19,10 +19,8 @@ public:
 protected:
 	FTSGameplayTags()
 	{
+		//This crashes the game and game will not run
 		UGameplayTagsManager& Manager = UGameplayTagsManager::Get();
-
-		//This crashes the game and it will not run
-		Manager.AddTagIniSearchPath(FPaths::ProjectConfigDir() / TEXT("GameplayTags"));
 	}
 	
 	virtual void AddTags() override
