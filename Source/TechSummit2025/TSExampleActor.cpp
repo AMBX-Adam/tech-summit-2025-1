@@ -13,7 +13,7 @@ ATSExampleActor::ATSExampleActor()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-#pragma optimize( "", off )
+UE_DISABLE_OPTIMIZATION
 // Called when the game starts or when spawned
 void ATSExampleActor::BeginPlay()
 {
@@ -25,7 +25,7 @@ void ATSExampleActor::BeginPlay()
 		TempNum += 1;
 	}
 }
-#pragma optimize( "", on )
+UE_ENABLE_OPTIMIZATION
 
 // Called every frame
 void ATSExampleActor::Tick(float DeltaTime)
