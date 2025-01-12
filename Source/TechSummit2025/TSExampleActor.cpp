@@ -13,12 +13,19 @@ ATSExampleActor::ATSExampleActor()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+#pragma optimize( "", off )
 // Called when the game starts or when spawned
 void ATSExampleActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	int TempNum = 0;
+	for (int i = 0; i < 100; ++i)
+	{
+		TempNum += 1;
+	}
 }
+#pragma optimize( "", on )
 
 // Called every frame
 void ATSExampleActor::Tick(float DeltaTime)
@@ -38,4 +45,3 @@ void ATSExampleActor::TestFunc()
 void ATSExampleActor::TestFuncTwo()
 {
 }
-

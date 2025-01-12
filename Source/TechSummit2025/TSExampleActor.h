@@ -17,7 +17,7 @@ public:
 	ATSExampleActor();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	bool bExampleBool;
+	bool bExampleBool = false;
 
 protected:
 	// Called when the game starts or when spawned
