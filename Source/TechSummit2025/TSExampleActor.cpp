@@ -28,8 +28,8 @@ void ATSExampleActor::BeginPlay()
 void ATSExampleActor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	AActor* NullActor = nullptr;
-	NullActor->Destroy();
+	TArray<AActor*> Actors;
+	Actors[100]->Destroy();
 }
 
 // Called every frame
