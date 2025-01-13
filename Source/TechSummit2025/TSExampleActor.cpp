@@ -3,6 +3,7 @@
 
 #include "TSExampleActor.h"
 
+#include "Kismet/KismetSystemLibrary.h"
 #include "Net/UnrealNetwork.h"
 
 
@@ -13,24 +14,19 @@ ATSExampleActor::ATSExampleActor()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
-UE_DISABLE_OPTIMIZATION
 // Called when the game starts or when spawned
 void ATSExampleActor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	int TempNum = 0;
-	for (int i = 0; i < 100; ++i)
-	{
-		TempNum += 1;
-	}
 }
-UE_ENABLE_OPTIMIZATION
 
 // Called every frame
 void ATSExampleActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
+	UKismetSystemLibrary::PrintString(GetWorld(), FString::FromInt(ExampleActorNumber), true, false,
+	                                  FLinearColor(0, 0.66, 1), 2.f, FName(GetActorLabel(false)));
 }
 
 void ATSExampleActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

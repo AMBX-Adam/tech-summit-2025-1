@@ -18,6 +18,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bExampleBool = false;
+	
+	int ExampleActorNumber = 50;
 
 protected:
 	// Called when the game starts or when spawned

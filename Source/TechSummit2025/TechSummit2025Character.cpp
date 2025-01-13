@@ -1,6 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "TechSummit2025Character.h"
+
+#include "EngineUtils.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -10,6 +12,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "TSExampleActor.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -58,6 +61,17 @@ void ATechSummit2025Character::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	
+	for ( TActorIterator<ATSExampleActor> Itr(GetWorld(), ATSExampleActor::StaticClass()); Itr; ++Itr )
+	{
+		auto CopyItr = Itr;
+		++CopyItr;
+		if (FMath::RandBool() || !CopyItr)
+		{
+			Itr->ExampleActorNumber = 100;
+			break;
+		}
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////

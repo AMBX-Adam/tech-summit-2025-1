@@ -46,7 +46,6 @@ class ATechSummit2025Character : public ACharacter
 
 public:
 	ATechSummit2025Character();
-	
 
 protected:
 
